@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sequoia. | Issue 01: Find what works</title>
+<meta name="description" content="A skincare magazine you can walk through. Find the skincare that works for your skin, from Tokyo, Seoul and New York.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css?v=21">
+</head>
+<body class="is-loading">
+
+<!-- Loader -->
+<div class="loader" aria-hidden="true">
+  <p class="loader-issue">Issue 01 &mdash; Winter 2026</p>
+  <div class="loader-word"><span>s</span><span>e</span><span>q</span><span>u</span><span>o</span><span>i</span><span>a</span><span class="dot">.</span></div>
+  <div class="loader-count"><span id="loader-num">00</span>%</div>
+</div>
+
+<div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="wordmark" aria-label="sequoia. home"><img src="seed-moss.svg" alt="" class="seed">sequoia<span class="dot">.</span></a>
+    <p class="nav-issue">Issue 01 <span class="page-indicator">/ <span id="page-num">Cover</span></span></p>
+    <a href="#subscribe" class="btn btn-small">Get early access <span class="arrow">&rarr;</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ COVER ============ -->
+  <section class="cover" data-page="Cover">
+    <div class="cover-stage">
+      <div class="cover-card" data-tilt="6">
+        <!-- Rotating cover: one is picked per visit; the buttons below switch between them. Edit the list in main.js (COVERS). -->
+        <img class="cover-img" src="https://images.unsplash.com/photo-1728949202468-c37fdbd76856?w=1600&q=80&auto=format&fit=crop" alt="Young man relaxing with a face mask on">
+        <img class="cover-img cover-img-next" alt="" aria-hidden="true">
+        <div class="cover-shade"></div>
+        <h1 class="masthead" aria-label="sequoia.">
+          <span class="mh-l">s</span><span class="mh-l">e</span><span class="mh-l">q</span><span class="mh-l">u</span><span class="mh-l">o</span><span class="mh-l">i</span><span class="mh-l">a</span><span class="mh-l dot">.</span>
+        </h1>
+        <p class="cover-issue">Issue 01 &nbsp;&middot;&nbsp; Winter 2026 &nbsp;&middot;&nbsp; The routine edit</p>
+        <ul class="cover-lines">
+          <li><span>p. 04</span>Find what works for <em>your</em> skin</li>
+          <li><span>p. 08</span>The world shelf: Tokyo, Seoul, New York</li>
+          <li><span>p. 12</span>Why one-size-fits-all fails</li>
+        </ul>
+        <div class="cover-switch" role="group" aria-label="Choose a cover">
+          <span class="cover-switch-label">Cover</span>
+          <button type="button" data-cover="0" aria-label="Cover 1">1</button>
+          <button type="button" data-cover="1" aria-label="Cover 2">2</button>
+          <button type="button" data-cover="2" aria-label="Cover 3">3</button>
+          <button type="button" class="cover-pause" aria-label="Pause cover rotation" aria-pressed="false"><span class="ic-pause" aria-hidden="true">&#10074;&#10074;</span><span class="ic-play" aria-hidden="true">&#9654;</span></button>
+        </div>
+        <a href="#contents" class="cover-cta">Open the issue <span class="arrow">&darr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTENTS ============ -->
+  <section id="contents" class="contents page" data-page="Contents">
+    <div class="container">
+      <div class="page-head">
+        <p class="kicker">Contents</p>
+        <p class="folio">p. 02</p>
+      </div>
+      <ol class="toc">
+        <li><a href="#letter" data-preview="https://images.unsplash.com/photo-1775013394343-fdf658742ed0?w=600&q=75&auto=format&fit=crop"><span class="toc-num">01</span><span class="toc-title">Editor's letter</span><span class="toc-page">p. 04</span></a></li>
+        <li><a href="#shelf" data-preview="https://images.unsplash.com/photo-1729952620303-4dc47fb5d93a?w=600&q=75&auto=format&fit=crop"><span class="toc-num">02</span><span class="toc-title">The world shelf</span><span class="toc-page">p. 08</span></a></li>
+        <li><a href="#tokyo" data-preview="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&q=75&auto=format&fit=crop"><span class="toc-num">03</span><span class="toc-title">Dispatch: Tokyo</span><span class="toc-page">p. 10</span></a></li>
+        <li><a href="#method" data-preview="https://images.unsplash.com/photo-1748543668646-e81cda0890f3?w=600&q=75&auto=format&fit=crop"><span class="toc-num">04</span><span class="toc-title">The method</span><span class="toc-page">p. 12</span></a></li>
+        <li><a href="#texture" data-preview="https://images.unsplash.com/photo-1784294331171-6deaf6847268?w=600&q=75&auto=format&fit=crop"><span class="toc-num">05</span><span class="toc-title">Texture study</span><span class="toc-page">p. 14</span></a></li>
+        <li><a href="#notes" data-preview="https://images.unsplash.com/photo-1785581778868-79100f7fe56c?w=600&q=75&auto=format&fit=crop"><span class="toc-num">06</span><span class="toc-title">Field notes</span><span class="toc-page">p. 16</span></a></li>
+        <li><a href="#subscribe" data-preview="https://images.unsplash.com/photo-1552046122-03184de85e08?w=600&q=75&auto=format&fit=crop"><span class="toc-num">07</span><span class="toc-title">Join the next issue</span><span class="toc-page">p. 18</span></a></li>
+      </ol>
+    </div>
+    <img class="toc-preview" alt="" aria-hidden="true">
+  </section>
+
+  <!-- ============ EDITOR'S LETTER ============ -->
+  <section id="letter" class="letter page" data-page="p. 04">
+    <div class="container letter-grid">
+      <div class="letter-photo" data-depth="0.12">
+        <img src="https://images.unsplash.com/photo-1775013394343-fdf658742ed0?w=900&q=80&auto=format&fit=crop" alt="Close-up of a face with a small bandage and dandelion seeds" loading="lazy">
+        <p class="caption">Fig. 1 &mdash; Every face is a different starting point.</p>
+      </div>
+      <div class="letter-text">
+        <div class="page-head"><p class="kicker">01 &mdash; Editor's letter</p><p class="folio">p. 04</p></div>
+        <p class="dropcap statement reveal-words">Skincare isn't <span class="nowrap">one-size-fits-all.</span> What clears your friend's skin might break you out. So most of us end up with a drawer of half-used bottles, and no idea what to try next.</p>
+        <p class="letter-body reveal">sequoia. exists to change that. We're building a simpler way to find the skincare that actually works for you. No wasted bottles. No guessing. More soon.</p>
+        <p class="signoff reveal">&mdash; The sequoia. team</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE WORLD SHELF (pinned, scrolls sideways, 3D cards) ============ -->
+  <section id="shelf" class="shelf-section" data-page="p. 08">
+    <div class="shelf-pin">
+      <div class="shelf-track">
+      <div class="shelf-intro">
+        <div class="page-head"><p class="kicker">02 &mdash; The world shelf</p><p class="folio">p. 08</p></div>
+        <h2>Tokyo.<br>Seoul.<br><em>New York.</em></h2>
+        <p class="shelf-lede">The products people actually love, from the beauty capitals of the world. Hover to turn them in your hands.</p>
+        <p class="hint">Keep scrolling &rarr;</p>
+      </div>
+        <article class="product" data-tilt="14">
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1729952620303-4dc47fb5d93a?w=900&q=80&auto=format&fit=crop" alt="COSRX snail mucin essence bottle on a textured surface" loading="lazy">
+            <span class="glare"></span>
+            <span class="product-flag">KR</span>
+          </div>
+          <p class="product-meta"><span>No. 01</span><span>Seoul, Korea</span></p>
+          <h3>COSRX</h3><p class="product-note">Snail mucin essence</p>
+        </article>
+        <article class="product" data-tilt="14">
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1709551264845-e9dddd775388?w=900&q=80&auto=format&fit=crop" alt="Beauty of Joseon sunscreen and cream on stone blocks" loading="lazy">
+            <span class="glare"></span>
+            <span class="product-flag">KR</span>
+          </div>
+          <p class="product-meta"><span>No. 02</span><span>Seoul, Korea</span></p>
+          <h3>Beauty of Joseon</h3><p class="product-note">Sunscreen and cream</p>
+        </article>
+        <article class="product" data-tilt="14">
+          <div class="product-card">
+            <img src="https://images.pexels.com/photos/31155527/pexels-photo-31155527.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Rows of Muji Light Toning Water bottles for sensitive skin on a store shelf" loading="lazy" style="object-position: 50% 55%">
+            <span class="glare"></span>
+            <span class="product-flag">JP</span>
+          </div>
+          <p class="product-meta"><span>No. 03</span><span>Tokyo, Japan</span></p>
+          <h3>Muji</h3><p class="product-note">Light Toning Water, for sensitive skin</p>
+        </article>
+        <article class="product" data-tilt="14">
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1594332322527-08753d4473c1?w=900&q=80&auto=format&fit=crop" alt="Hand holding a Neutrogena Hydro Boost tube against a blue sky" loading="lazy">
+            <span class="glare"></span>
+            <span class="product-flag">US</span>
+          </div>
+          <p class="product-meta"><span>No. 04</span><span>United States</span></p>
+          <h3>Neutrogena</h3><p class="product-note">Hydro Boost</p>
+        </article>
+        <article class="product" data-tilt="14">
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1690896060855-d346f80e86b3?w=900&q=80&auto=format&fit=crop" alt="Two The Ordinary serum bottles on a beige surface" loading="lazy">
+            <span class="glare"></span>
+            <span class="product-flag">CA</span>
+          </div>
+          <p class="product-meta"><span>No. 05</span><span>Toronto, Canada</span></p>
+          <h3>The Ordinary</h3><p class="product-note">Serums</p>
+        </article>
+        <article class="product" data-tilt="14">
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1641130290711-01c4c4558562?w=900&q=80&auto=format&fit=crop" alt="La Roche-Posay Effaclar Mat tube on a white surface" loading="lazy">
+            <span class="glare"></span>
+            <span class="product-flag">FR</span>
+          </div>
+          <p class="product-meta"><span>No. 06</span><span>France</span></p>
+          <h3>La Roche-Posay</h3><p class="product-note">Effaclar Mat</p>
+        </article>
+        <div class="shelf-end">
+          <p class="kicker">Also in this issue</p>
+          <p class="also">Shiseido &middot; SK-II &middot; Hada Labo &middot; Anessa &middot; Laneige &middot; Cetaphil &middot; Sulwhasoo &middot; Innisfree &middot; Winona &middot; Proya &middot; Pechoin &middot; CeraVe &middot; Glossier</p>
+          <p class="disclaimer">Brand names and photos are shown for reference. sequoia. is independent and not affiliated with or endorsed by these brands.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DISPATCH: TOKYO (parallax layers) ============ -->
+  <section id="tokyo" class="tokyo page" data-page="p. 10">
+    <div class="tokyo-bg" data-parallax="-0.15">
+      <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=1800&q=75&auto=format&fit=crop" alt="Neon-lit Shibuya intersection in Tokyo at night" loading="lazy">
+    </div>
+    <div class="container tokyo-inner">
+      <div class="page-head light"><p class="kicker">03 &mdash; Dispatch</p><p class="folio">p. 10</p></div>
+      <h2 class="tokyo-title"><span class="jp" aria-hidden="true">東京</span>Tokyo</h2>
+      <p class="tokyo-lede reveal">In Japan, skincare is a daily ritual of layers: cleanse, lotion, serum, cream. Light textures, built up slowly.</p>
+      <figure class="tokyo-inset" data-parallax="0.12" data-tilt="8">
+        <img src="https://images.pexels.com/photos/21792346/pexels-photo-21792346.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Matsumoto Kiyoshi drugstore with Shiseido, Kosé, Kanebo, Sofina and SK-II on its sign" loading="lazy" style="object-position: 46% 50%">
+        <figcaption class="caption light">Fig. 2 &mdash; A Matsumoto Kiyoshi drugstore: Shiseido, Kosé, Kanebo, SK-II.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ THE METHOD: 3D flip cards ============ -->
+  <section id="method" class="method page" data-page="p. 12">
+    <div class="container">
+      <div class="page-head"><p class="kicker">04 &mdash; The method</p><p class="folio">p. 12</p></div>
+      <h2 class="reveal">Finding your routine,<br>made <em>simple.</em></h2>
+      <div class="flips">
+        <button class="flip reveal" aria-pressed="false">
+          <span class="flip-inner">
+            <span class="flip-front"><span class="flip-num">01</span><span class="flip-title">Tell us about your skin</span><span class="flip-hint">Tap to turn &#8635;</span></span>
+            <span class="flip-back"><span class="flip-num">01</span><span>A few quick questions. No jargon, no judgment.</span></span>
+          </span>
+        </button>
+        <button class="flip reveal" aria-pressed="false">
+          <span class="flip-inner">
+            <span class="flip-front"><span class="flip-num">02</span><span class="flip-title">We'll do the rest</span><span class="flip-hint">Tap to turn &#8635;</span></span>
+            <span class="flip-back"><span class="flip-num">02</span><span>We're building a better way to find what works for you. You'll see it first.</span></span>
+          </span>
+        </button>
+        <button class="flip reveal" aria-pressed="false">
+          <span class="flip-inner">
+            <span class="flip-front"><span class="flip-num">03</span><span class="flip-title"><em>Coming soon</em></span><span class="flip-hint">Tap to turn &#8635;</span></span>
+            <span class="flip-back"><span class="flip-num">03</span><span>Issue 02 opens to early access members first.</span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEXTURE STUDY: mouse parallax collage ============ -->
+  <section id="texture" class="texture page" data-page="p. 14">
+    <div class="container texture-grid">
+      <div class="texture-text">
+        <div class="page-head"><p class="kicker">05 &mdash; Texture study</p><p class="folio">p. 14</p></div>
+        <h2 class="reveal">Gel, oil, <em>cream.</em></h2>
+        <p class="reveal">Texture tells you a lot. Oily skin often likes light gels and serums; dry skin often likes richer creams. Knowing your skin is the first step.</p>
+      </div>
+      <div class="collage" aria-label="Collage of serum and cream textures">
+        <img class="c c1" data-depth="0.6" src="https://images.unsplash.com/photo-1748543668646-e81cda0890f3?w=800&q=80&auto=format&fit=crop" alt="Serums arranged on clear round plates" loading="lazy">
+        <img class="c c2" data-depth="1.2" src="https://images.unsplash.com/photo-1784294331171-6deaf6847268?w=600&q=80&auto=format&fit=crop" alt="Golden serum dripping from a glass pipette" loading="lazy">
+        <img class="c c3" data-depth="0.9" src="https://images.unsplash.com/photo-1748543668687-624e058c367c?w=600&q=80&auto=format&fit=crop" alt="Two clear gel textures overlapping" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FIELD NOTES ============ -->
+  <section id="notes" class="notes page" data-page="p. 16">
+    <div class="container">
+      <div class="page-head"><p class="kicker">06 &mdash; Field notes</p><p class="folio">p. 16</p></div>
+      <div class="notes-head">
+        <div>
+          <h2 class="reveal">Things nobody told you.</h2>
+          <p class="notes-lede reveal">Skincare isn't just for one kind of person. Everyone has skin, and everyone deserves a routine that works.</p>
+        </div>
+        <figure class="notes-photo reveal" data-parallax="0.06">
+          <img src="https://images.unsplash.com/photo-1603297430333-d6fbe0eafd6d?w=800&q=80&auto=format&fit=crop" alt="Softly lit portrait of a man with his eyes closed" loading="lazy">
+          <figcaption class="caption">Fig. 3 &mdash; Good skin starts with knowing yours.</figcaption>
+        </figure>
+      </div>
+      <div class="columns">
+        <article class="note reveal">
+          <span class="note-num">No. 01 &mdash; Sunscreen</span>
+          <h3>UVA rays pass through window glass.</h3>
+          <p>Sitting by a window or driving? Your skin still gets UVA exposure, so sunscreen matters indoors too.</p>
+        </article>
+        <article class="note reveal">
+          <span class="note-num">No. 02 &mdash; Routine</span>
+          <h3>Apply products thinnest to thickest.</h3>
+          <p>Lighter serums go on first, then moisturizer, with sunscreen as the last step in the morning.</p>
+        </article>
+        <article class="note reveal">
+          <span class="note-num">No. 03 &mdash; New products</span>
+          <h3>Try a little before you commit.</h3>
+          <p>Dermatologists recommend testing a new product on a small patch of skin first. If it irritates there, it will likely irritate your face too.</p>
+        </article>
+      </div>
+      <p class="follow">More every week on Instagram <a href="https://www.instagram.com/official_sequoia/" target="_blank" rel="noopener" class="hover-line">@official_sequoia</a></p>
+    </div>
+  </section>
+
+  <!-- ============ SUBSCRIBE (waitlist) ============ -->
+  <section id="subscribe" class="subscribe page" data-page="p. 18">
+    <div class="subscribe-photo" data-parallax="-0.1">
+      <img src="https://images.unsplash.com/photo-1552046122-03184de85e08?w=1400&q=80&auto=format&fit=crop" alt="A hand reaching toward a jar of cream and a serum bottle" loading="lazy">
+    </div>
+    <div class="container subscribe-grid">
+      <div>
+        <div class="page-head light"><p class="kicker">07 &mdash; The next issue</p><p class="folio">p. 18</p></div>
+        <h2 class="subscribe-title">Be part of<br><em>Issue 02.</em></h2>
+        <p class="subscribe-explainer">Our first launch. Early access members see it before anyone else.</p>
+        <p class="subscribe-lead">Tell us a little about your skin to get in.</p>
+      </div>
+      <div class="form-wrap">
+        <form id="waitlist-form" class="form" novalidate>
+          <!-- Spam trap: hidden from people, bots tend to fill it in. -->
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="field">
+            <span class="field-label">Email*</span>
+            <input type="email" name="email" placeholder="you@example.com" required>
+          </label>
+          <fieldset class="field">
+            <legend class="field-label">Skin type*</legend>
+            <div class="chips">
+              <label><input type="radio" name="skin_type" value="Oily" required><span>Oily</span></label>
+              <label><input type="radio" name="skin_type" value="Dry"><span>Dry</span></label>
+              <label><input type="radio" name="skin_type" value="Combination"><span>Combination</span></label>
+              <label><input type="radio" name="skin_type" value="Normal"><span>Normal</span></label>
+              <label><input type="radio" name="skin_type" value="Not sure"><span>Not sure</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend class="field-label">Main concern*</legend>
+            <div class="chips">
+              <label><input type="radio" name="concern" value="Breakouts" required><span>Breakouts</span></label>
+              <label><input type="radio" name="concern" value="Dryness"><span>Dryness</span></label>
+              <label><input type="radio" name="concern" value="Oiliness"><span>Oiliness</span></label>
+              <label><input type="radio" name="concern" value="Dark spots"><span>Dark spots</span></label>
+              <label><input type="radio" name="concern" value="Sensitivity"><span>Sensitivity</span></label>
+              <label><input type="radio" name="concern" value="Just starting out"><span>Just starting out</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend class="field-label">Age range*</legend>
+            <div class="chips">
+              <label><input type="radio" name="age" value="13 to 17" required><span>13 to 17</span></label>
+              <label><input type="radio" name="age" value="18 to 24"><span>18 to 24</span></label>
+              <label><input type="radio" name="age" value="25 to 34"><span>25 to 34</span></label>
+              <label><input type="radio" name="age" value="35+"><span>35+</span></label>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-light btn-full">Get early access <span class="arrow">&rarr;</span></button>
+          <p class="form-note">You must be 13 or older to join. We'll only email you about sequoia. See our <a href="privacy.html">Privacy Policy</a>.</p>
+          <p class="form-error" role="alert" hidden></p>
+        </form>
+        <div id="waitlist-thanks" class="thanks" hidden>
+          <h3>You're in.</h3>
+          <p>You'll hear from us before anyone else. Until then, follow <a href="https://www.instagram.com/official_sequoia/" target="_blank" rel="noopener">@official_sequoia</a> for skincare facts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <nav class="footer-links">
+        <a href="https://www.instagram.com/official_sequoia/" target="_blank" rel="noopener" class="hover-line">Instagram</a>
+        <a href="privacy.html" class="hover-line">Privacy</a>
+        <a href="#top" class="hover-line">Back to cover &uarr;</a>
+      </nav>
+      <p class="fine">&copy; 2026 sequoia. Educational content only, not medical advice.</p>
+    </div>
+    <p class="credits">Photography via Unsplash: Fleur Kaan, Victor Meza, Vicky Hladynets, Ellen Qin, Elena Soroka, Maria Lupan, Arthur Pereira, Cosmin Ursea, Jezael Melgoza, ibnu ihza, AJEET NISHAD, Henry Davidson, Toa Heftiba, Nathan Dumlao. Via Pexels: Tony Wu, Dang Hong.</p>
+    <p class="footer-word" aria-hidden="true">sequoia<span class="dot">.</span></p>
+  </div>
+</footer>
+
+<script src="main.js?v=20"></script>
+</body>
+</html>
